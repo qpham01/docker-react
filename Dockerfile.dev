@@ -1,0 +1,17 @@
+FROM node:alpine
+
+USER node
+
+RUN mkdir -p /home/node/app
+
+WORKDIR /home/node/app
+
+COPY --chown=node:node ./package.json ./
+RUN npm install
+COPY --chown=node:node ./ ./
+
+CMD ["npm", "run", "start"]
+
+# \\wsl.localhost\Ubuntu-22.04\home\quoc\docker\frontend
+# docker build -f Dockerfile.dev -t qpham01:frontend .
+# docker run -it -p 3000:3000 -v /home/node/app/node_modules -v ~/docker/frontend:/home/node/app qpham01:frontend
