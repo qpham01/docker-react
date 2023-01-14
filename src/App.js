@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hi There! Just changed back and then again!
+          Hi There! This change is on branch feature-001
         </p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
